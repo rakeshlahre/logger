@@ -1,5 +1,5 @@
 # logger
-Continuously Logging a file
+Continuously Watching a file and log some lines whenever change in file
 
 ### Development
 1. `npm run install-all`
