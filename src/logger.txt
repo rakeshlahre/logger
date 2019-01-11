@@ -11,3 +11,7 @@ Client-side JavaScript does not allow the reading or writing of files
 JavaScript cannot be used for networking applications because there is no such support available
 JavaScript doesn't have any multi-threading or multiprocessor capabilities
 One of major strengths of JavaScript is that it does not require expensive development tools
+fayeed
+acsbasiucna
+acnbjsnck
+asdbkasjsdmajkdbaoimd

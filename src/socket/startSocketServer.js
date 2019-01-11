@@ -2,7 +2,7 @@ const socketIo = require('socket.io');
 const uuid = require('uuid');
 const {socketEmitter} = require('../evenEmitter');
 
-const startSocketServer = function (server, lastLines) {
+const startSocketServer = function (server, readLastLines) {
   const io = socketIo.listen(server);
 
   const on = function (eventType) {
@@ -23,7 +23,8 @@ const startSocketServer = function (server, lastLines) {
   io.on('connection', function (socket) {
     socket.join('public');
 
-    socket.once('join', function () {
+    socket.once('join', async function () {
+      const lastLines = await readLastLines();
       socket.emit('info', lastLines);
     });
 

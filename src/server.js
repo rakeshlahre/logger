@@ -16,6 +16,5 @@ const startHttpSever = async () => {
 startHttpSever()
   .then(async (server) => {
     startWatchingFile();
-    const lastLines = await readLastLines();
-    startSocketServer(server, lastLines);
+    startSocketServer(server, readLastLines);
   })
